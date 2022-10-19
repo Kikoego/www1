@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.headerContrainer {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.nav > ul > li > a {
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+}
+.nav > ul > li {
+	list-style: none;
+}
