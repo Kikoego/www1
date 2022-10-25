@@ -2,16 +2,32 @@
 	margin: 0;
 	padding: 0;
 }
-.headerContrainer {
-	display: flex;
-	justify-content: space-between;
-	text-align: center;
+
+/*Тут типа общие классы*/
+
+.logoContainer {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 38px;
+	/*display: grid;
+	grid-template-columns: repeat(2, 2fr);*/
 }
-.nav > ul > li > a {
+.headerContrainer {
+	padding: 24px 250px 0 250px;
+	max-width: 1230px;
+}
+.headerInner {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navList {
+	list-style-type: none;
+	display: flex;
+	gap: 34px;
+}
+.navItem a {
 	text-decoration: none;
 	color: black;
 	text-transform: uppercase;
-}
-.nav > ul > li {
-	list-style: none;
 }
