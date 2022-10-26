@@ -31,3 +31,8 @@
 	color: black;
 	text-transform: uppercase;
 }
+
+/*Тут типа хедер*/
+.wrapper {
+	background-image: url(img/Frame.svg);
+}
