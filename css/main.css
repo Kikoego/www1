@@ -33,6 +33,134 @@
 }
 
 /*Тут типа хедер*/
+
 .wrapper {
-	background-image: url(img/Frame.svg);
+	background-image: url(../img/Frame.svg); /*Хз почему если no-repeat сделать вся картинка пропадает*/
+	background-repeat: no-repeat;
+	height: 189px;
+	background-position: center;
+	background-size: cover;
+	padding: 101px 0;
+}
+.wrapperContainer {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.wrapperInner {
+	text-align: center;
+	color: white;
+}
+.wrapperH1 {
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 44px;
+	line-height: 55px;
+}
+.wrapperP {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	padding-top: 37px;
+}
+#wrapper::after {
+	display: block;
+	content: '';
+	background: #FFFFFF;
+	height: 2px;
+	width: 80px;
+	margin: auto;
+	margin-top: 28px;
+}
+
+/*Типа wrapper*/
+
+.underWrapper {
+	background-color: #FEFEC9;
+	height: 289px;
+}
+.underWrapperImage {
+	text-align: center;
+	
+	/*ХЗ как сделать лучше спросить потом*/
+}
+.underWrapperImage img {
+	margin-top: -2.5%;
+}
+.underWrapperText {
+	padding: 60px 250px 61px 250px;
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+}
+.underWrapperButton {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+
+}
+.underWrapperButton button {
+	/*margin-top: 39px;*/
+	background-color: #FEFEC9;
+	border-radius: 1px;
+	padding: 13px 34px 20px 34px;
+}
+
+/*Как-то так только крестик нужно переместить (по идее должно сразу на места встать)*/
+/*Это underWrapper*/
+
+.methods {
+	padding: 69px 250px 69px 250px;
+}
+.methodsHeader {
+	text-align: center;
+}
+.methodsHeader::after {
+	display: block;
+	content: '';
+	background:#00000017;
+	height: 2px;
+	width: 80px;
+	margin: auto;
+	margin-top: 28px;
+}
+.methodsTarget {
+	height: 368px;
+	width: 320px;
+	padding-top: 43px;
+}
+.methodsTargetImage {
+	background-color: #F5F5F5;
+}
+.methodsH2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333333;
+
+	padding-top: 38px;
+}
+.methodsText {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	text-align: center;
+	color: #333333;
+
+	padding: 20px 20px 0px 20px;
 }
