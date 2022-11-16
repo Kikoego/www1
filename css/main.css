@@ -205,7 +205,6 @@
 	width: 300px;
 	display: inline-block;
 	background: #FFFFFF;
-	
 }
 .projectRow {
 	justify-content: center;
@@ -258,4 +257,151 @@
 	width: 80px;
 	margin: auto;
 	margin-top: 28px;
+}
+.personalTeam {
+	justify-content: center;
+	display: flex;
+	gap: 20px;
+}
+.personal {
+	display: inline-block;
+	background: #FFFFFF;
+}
+.personalFullname {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333333;
+
+	padding: 19px 0 4px 0;
+}
+.personalPost {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #333333;
+	padding-bottom: 29px;
+}
+.personalSocialNetworks {
+	justify-content: center;
+	display: flex;
+	gap: 6px;
+}
+.personalSocialImage {
+	background: #F5F5F5;
+	width: 29px;
+	height: 14px;
+	text-align: center;
+}
+
+/*Персонал*/
+
+.contacts {
+	background-image: url(../img/contacts/background.svg); /*Хз почему если no-repeat сделать вся картинка пропадает*/
+	background-repeat: no-repeat;
+	height: 517px;
+	background-position: center;
+	background-size: cover;
+}
+.contactsH1 {
+	
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 23px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+
+	padding: 79px 0 28px 0;
+}
+.contactsH1::after {
+	display: block;
+	content: '';
+	background:#00000017;
+	height: 2px;
+	width: 80px;
+	margin: auto;
+	margin-top: 28px;
+	margin-bottom: 43px;
+}
+.contactsRow {
+	justify-content: center;
+	display: flex;
+	gap: 20px;
+}
+.contact {
+	display: inline-block;
+	height: 238px;
+	width: 320px;
+}
+.contactH2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333333;
+
+	padding: 26px 0 20px 0;
+}
+.contactText {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 22px;
+	text-align: center;
+	color: #212121;
+}
+.contactsImage {
+	text-align: center;
+}
+/*  */
+#email {
+	padding-bottom: 22px;
+}
+/* Отступ между строками */
+#socialImages {
+	padding-right: 9px;
+}
+
+/*LET’s Get in touch социалки, адреса и тд*/
+
+.footerMenu {
+	height: 639px;
+	background: #000000;
+	border-radius: 0px;
+}
+.footerContainer {
+	height: 501px;
+	padding: 69px 250px 69px 250px;
+}
+.footerForm {
+	margin: auto;
+	height: 398px;
+	width: 564px;
+}
+
+/*ХЗ не работает*/
+.footerForm::-moz-placeholder { color: white;}
+.footerForm::-webkit-input-placeholder { color: white; }
+
+
+
+
+.footerInput {
+	height: 57px;
+	width: 564px;
+	background: rgba(255, 255, 255, 0.18);
+border-radius: 0px;
 }
