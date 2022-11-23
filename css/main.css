@@ -366,12 +366,25 @@
 .contactsImage {
 	text-align: center;
 }
-/*  */
+
 #email {
 	padding-bottom: 22px;
 }
+
+.contactContainer {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 22px;
+	color: #212121;
+	width: 201px;
+	margin-left: auto;
+}
+/*Этот класс только для сердечка и его текста (социалки)*/
+
 /* Отступ между строками */
-#socialImages {
+.ContactSocialImages {
 	padding-right: 9px;
 }
 
@@ -394,7 +407,8 @@
 
 /*ХЗ не работает*/
 .footerForm::-moz-placeholder { color: white;}
-.footerForm::-webkit-input-placeholder { color: white; }
+::-webkit-input-placeholder { color: white; padding-left: 20px}
+/*Вроде как работает но честно говоря пока хз*/
 
 
 
@@ -404,4 +418,26 @@
 	width: 564px;
 	background: rgba(255, 255, 255, 0.18);
 border-radius: 0px;
+}
+.footerFormBtn {
+	display: flex;
+	padding: 22px 0px 92px 0px;
+}
+.footerBtn {
+	font-family: 'Vollkorn';
+	font-style: italic;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 22px;
+	text-align: center;
+	color: #8BCAC3;
+
+	height: 53px;
+	width: 210px;
+	border: 1px solid #7EC4BD;
+	background: black;
+
+
+	margin: auto;
+	/*Как бы работает но по идее через flexboxы должно работать а не работает дядя богдан пизды даёт за такое*/
 }
