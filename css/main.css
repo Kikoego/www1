@@ -6,9 +6,16 @@
 /*Тут типа общие классы*/
 
 .logoContainer {
+	display: flex;
 	font-weight: 400;
 	font-size: 22px;
-	line-height: 38px;
+
+
+	line-height: 65px;
+	/*Высота линии для того чтобы стоять по вертикале на центре (возможно решение неправильное, но работает)*/
+
+	color: #333333;
+	gap: 18px;
 	/*display: grid;
 	grid-template-columns: repeat(2, 2fr);*/
 }
@@ -83,13 +90,15 @@
 	height: 289px;
 }
 .underWrapperImage {
-	text-align: center;
-	
+	/*display: flex;*/
+	/*justify-content: center;*/
+	position: absolute;
+	left: 47.8%;
+	top: 47.3%;
+	/*align-items: center;*/
 	/*ХЗ как сделать лучше спросить потом*/
 }
-.underWrapperImage img {
-	margin-top: -2.5%;
-}
+
 .underWrapperText {
 	padding: 60px 250px 61px 250px;
 	font-family: 'Vollkorn';
@@ -97,6 +106,12 @@
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 25px;
+	text-align: center;
+
+	/*width: 940px;*/
+	height: 75px;
+}
+.underText {
 	text-align: center;
 }
 .underWrapperButton {
@@ -119,7 +134,7 @@
 /*Это underWrapper*/
 
 .methods {
-	padding: 69px 0px 69px 0px;
+	padding: 69px 0 69px 0;
 	text-align: center;
 }
 .methodsHeader {
@@ -158,7 +173,7 @@
 	text-align: center;
 	color: #333333;
 
-	padding: 20px 20px 0px 20px;
+	padding: 20px 20px 0 20px;
 }
 .methodsInnerDiv {
 	height: 368px;
@@ -205,7 +220,15 @@
 	width: 300px;
 	display: inline-block;
 	background: #FFFFFF;
+
+	transition: 1s;
 }
+
+.project:hover {
+	transform: scale(1.1);
+}
+
+
 .projectRow {
 	justify-content: center;
 	display: flex;
@@ -303,6 +326,104 @@
 
 /*Персонал*/
 
+
+.mySlides {
+	display: flex;
+	justify-content: center;
+	gap: 0;
+}
+
+.prev, .next {
+	cursor: pointer;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.navButton {
+	display: flex;
+	justify-content: space-between;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(70, 70, 70, 0.8);
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+/*Анимация переключения слайдера*/
+
+.slider {
+	height: 511px;
+	padding-top: 140px;
+	text-align: center;
+}
+.sliderReview {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 33px;
+	color: #333333;
+
+	padding: 2px 54px 24px 54px;
+}
+.reviewCreator {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #ABABAB;
+
+	padding-top: 10px;
+}
+.sliderContainer {
+	padding-top: 67px;
+	display: flex;
+	justify-content: center;
+}
+.sliderContent {
+	width: 446.5px;
+	height: 215px;
+}
+.sliderWand {
+	width: 2px;
+	height: 215px;
+	background: rgba(0, 0, 0, 0.04);
+}
+
+/*слайдер с отзывами*/
+
 .contacts {
 	background-image: url(../img/contacts/background.svg); /*Хз почему если no-repeat сделать вся картинка пропадает*/
 	background-repeat: no-repeat;
@@ -379,7 +500,7 @@
 	line-height: 22px;
 	color: #212121;
 	width: 201px;
-	margin-left: auto;
+	margin-left: 110px;
 }
 /*Этот класс только для сердечка и его текста (социалки)*/
 
@@ -405,23 +526,43 @@
 	width: 564px;
 }
 
-/*ХЗ не работает*/
+
 .footerForm::-moz-placeholder { color: white;}
-::-webkit-input-placeholder { color: white; padding-left: 20px}
-/*Вроде как работает но честно говоря пока хз*/
+::-webkit-input-placeholder { color: white;}
 
+/*Отвечает за цвет текста в input*/
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 
+/*Убирает кнопки в input (Сделанно для type number)*/
+
+/*input:focus::placeholder {*/
+/*	transform: translateY(-10px);*/
+/*}*/
+
+/*/!!!Можно будет побаловаться с этим*/
 
 .footerInput {
 	height: 57px;
 	width: 564px;
-	background: rgba(255, 255, 255, 0.18);
-border-radius: 0px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 0px;
+	border: 0;
+	padding-left: 31px;
+
+	font-family: 'Vollkorn';
+	font-style: italic;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 22px;
 }
 .footerFormBtn {
 	display: flex;
-	padding: 22px 0px 92px 0px;
+	padding-top: 22px;
 }
 .footerBtn {
 	font-family: 'Vollkorn';
@@ -440,4 +581,29 @@ border-radius: 0px;
 
 	margin: auto;
 	/*Как бы работает но по идее через flexboxы должно работать а не работает дядя богдан пизды даёт за такое*/
+}
+#textArea {
+	padding-top: 17px;
+	height: 127px;
+}
+.InputColor {
+	background: rgba(255, 255, 255, 0.18);
+}
+
+
+/*Форма для заполнения и кнопка*/
+
+
+.logoFooter {
+	text-align: center;
+	padding: 40px 0 14px 0;
+}
+.footerText {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.4);
 }

@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/slider.js"></script>
 	<title>Document</title>
 </head>
 <body>
@@ -39,18 +40,15 @@
 			</div>
 		</div>
 
+		<div class="underWrapperImage">
+			<img src="img/krestik.svg" alt="">
+		</div>
+
 		<div class="underWrapper">
-			<div class="underWrapperImage">
-				<img src="img/krestik.svg" alt="">
-			</div>
-			<div>
-				<div class="underWrapperText">
-					Minimalist is a full-service digital creative agency located in Ontorio Canada. We focus on design, consulting, technology, and photography. We’ve been building unique digital products, platforms, and experiences for the past 6 years. Let us help your company grow.
-				</div>
+				<div class="underWrapperText">Minimalist is a full-service digital creative agency located in Ontorio Canada. We focus on design, consulting,<br> technology, and photography. We’ve been building unique digital products, platforms, and experiences for the past 6<br> years. Let us help your company grow.</div>
 				<div class="underWrapperButton">
 					<button>Get in Touch</button>
 				</div>
-			</div>
 		</div>
 		<!--Тута надо чекать после того как крестик на место поставим-->
 		<div class="methods">
@@ -80,7 +78,7 @@
 			<h1 class="projectsH1">Recent projects</h1>
 			<div class="projectRow">
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/woods.svg" alt=""></div>
+					<a href="#"><img src="img/projects/woods.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">woods</h2>
 						<div class="projectsText">Photography</div>
@@ -88,7 +86,7 @@
 				</div>
 
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/path.svg" alt=""></div>
+					<a href="#"><img src="img/projects/path.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">path</h2>
 						<div class="projectsText">Website • Photography</div>
@@ -96,7 +94,7 @@
 				</div>
 
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/darkness.svg" alt=""></div>
+					<a href="#"><img src="img/projects/darkness.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">darkness</h2>
 						<div class="projectsText">Website</div>
@@ -106,7 +104,7 @@
 			</div>
 			<div class="projectRow">
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/waves.svg" alt=""></div>
+					<a href="#"><img src="img/projects/waves.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">waves</h2>
 						<div class="projectsText">Photography</div>
@@ -114,7 +112,7 @@
 				</div>
 
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/drops.svg" alt=""></div>
+					<a href="#"><img src="img/projects/drops.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">drops</h2>
 						<div class="projectsText">Website</div>
@@ -122,7 +120,7 @@
 				</div>
 
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/ocean.svg" alt=""></div>
+					<a href="#"><img src="img/projects/ocean.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">ocean</h2>
 						<div class="projectsText">Website</div>
@@ -132,15 +130,15 @@
 			<!--2й ряд-->
 			<div class="projectRow">
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/town.svg" alt=""></div>
+					<a href="#"><img src="img/projects/town.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">town</h2>
 						<div class="projectsText">Website</div>
 					</div>
 				</div>
-
+				<a href=""></a>
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/mountain.svg" alt=""></div>
+					<a href="#"><img src="img/projects/mountain.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">mountain</h2>
 						<div class="projectsText">Website</div>
@@ -148,7 +146,7 @@
 				</div>
 
 				<div class="project">
-					<div class="projectImage"><img src="img/projects/camera.svg" alt=""></div>
+					<a href="#"><img src="img/projects/camera.svg" alt="" class="projectImage"></a>
 					<div>
 						<h2 class="projectsH2">camera</h2>
 						<div class="projectsText">Website</div>
@@ -214,11 +212,51 @@
 			</div>
 		</div>
 
-		<div>
-			<div>
-				<img src="" alt="">
-				<div>
-					Слайдер с отзывами (там кстати еле видная полосочка между челиками)
+		<div class="slider">
+			<img src="img/slider/sliderLogo.svg" alt="">
+			<div class="sliderContainer">
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<div class="sliderContent">
+							<h1 class="sliderReview">“I love these guys! They did a great job. I would recommend them to anyone.”</h1>
+							<img src="img/slider/julius.svg" alt="">
+							<p class="reviewCreator">Julius Von Uberstien</p>
+						</div>
+
+						<div class="sliderWand"></div>
+
+						<div class="sliderContent">
+							<h1 class="sliderReview">“Elexis Corp. has grown immensely with the help of Minimal.”</h1>
+							<img src="img/slider/rachel.svg" alt="">
+							<p class="reviewCreator">Rachel Stamos</p>
+						</div>
+						<!--Это 1 страница слайдера (2 отзыва)-->
+					</div>
+
+					<div class="mySlides fade" style="display:none;">
+						<div class="sliderContent">
+							<h1 class="sliderReview">“Top-notch job. Couldn’t have asked for better design and photography.</h1>
+							<img src="img/slider/phil.svg" alt="">
+							<p class="reviewCreator">Phil Johnson</p>
+						</div>
+
+						<div class="sliderWand"></div>
+
+						<div class="sliderContent">
+							<h1 class="sliderReview">“I’m working with these guys from now on!”</h1>
+							<img src="img/slider/john.svg" alt="">
+							<p class="reviewCreator">John Smith</p>
+						</div>
+					</div>
+					<!-- кнопки -->
+					<div class="navButton">
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -269,23 +307,25 @@
 				</div>
 			</div>
 		</div>
-		<!--А мб и не футер вовсе-->
+
 
 		<footer>
 			<div class="footerMenu">
 				<div class="footerContainer">
 					<div class="footerForm">
-						<input type="text" class="footerInput" placeholder="Name">
+						<input type="text" class="footerInput InputColor" placeholder="Name">
 						<input type="text" class="footerInput" placeholder="Email">
-						<input type="text" class="footerInput" placeholder="Budget">
-						<input type="text" class="footerInput" placeholder="Describe youre project...">
+						<input type="number" class="footerInput InputColor" placeholder="Budget">
+						<textarea name  class="footerInput" id="textArea" placeholder="Describe youre project..." cols="50" rows="10"></textarea>
 						<div class="footerFormBtn">
 							<button class="footerBtn">Send Message</button>
 						</div>
 					</div>
 					<div class="logoFooter">
-						logo
-						123
+						<img src="img/footerLogo.svg" alt="">
+					</div>
+					<div class="footerText">
+						Minimal Template made in Webflow. All rights reserved.
 					</div>
 				</div>
 			</div>
