@@ -18,6 +18,8 @@
 	gap: 18px;
 	/*display: grid;
 	grid-template-columns: repeat(2, 2fr);*/
+
+	flex-wrap: wrap;
 }
 .headerContrainer {
 	padding: 24px 250px 0 250px;
@@ -25,8 +27,9 @@
 }
 .headerInner {
 	display: flex;
-  justify-content: space-between;
-  align-items: center;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 .navList {
 	list-style-type: none;
@@ -38,19 +41,85 @@
 	color: black;
 	text-transform: uppercase;
 }
+.navItem a:hover {
+	color: #bbb;
+}
 
+.navDrop {
+	background-color: white;
+	color: white;
+	padding: 5px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	color: black;
+	transition: 0.3s;
+}
+.navDrop:hover {
+	background-color: #bbb;
+}
+
+.navButton {
+	display: none;
+}
+
+.navButton a:hover {background-color: #ddd;}
+
+.dropContent {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropContent a {
+	color: black;
+	padding: 12px 0;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+.show {
+	display: block;
+	margin: 30px 0 0 0;
+}
+
+@media (max-width: 670px) {
+	.headerContrainer {
+		padding: 24px 30px 0;
+	}
+	.navButton {
+		display: flex;
+		text-align: right;
+	}
+	.nav {
+		display: none;
+	}
+	.dropContent {
+		min-width: 60px;
+	}
+}
+@media (max-width: 1100px) {
+	.headerContrainer {
+		padding: 24px 30px 0;
+
+	}
+}
 /*Тут типа хедер*/
 
 .wrapper {
 	background-image: url(../img/Frame.svg); /*Хз почему если no-repeat сделать вся картинка пропадает*/
 	background-repeat: no-repeat;
-	height: 189px;
+	height: 100%;
 	background-position: center;
 	background-size: cover;
 	padding: 101px 0;
 }
 .wrapperContainer {
 	max-width: 100%;
+
 	margin: 0 auto;
 }
 .wrapperInner {
@@ -87,29 +156,28 @@
 
 .underWrapper {
 	background-color: #FEFEC9;
-	height: 289px;
+	height: 100%;
 }
 .underWrapperImage {
-	/*display: flex;*/
-	/*justify-content: center;*/
 	position: absolute;
-	left: 47.8%;
-	top: 47.3%;
-	/*align-items: center;*/
-	/*ХЗ как сделать лучше спросить потом*/
+	left: calc(50% - 52px/2);
+	transform:translate(0, -50%);
 }
+/*крч старец пойми меня я не знаю как почему и зачем этот крестик, он по центру не трогай*/
+/*адаптив крестика*/
+
+
+
+
 
 .underWrapperText {
-	padding: 60px 250px 61px 250px;
+	padding: 60px 0 40px 0;
 	font-family: 'Vollkorn';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 25px;
 	text-align: center;
-
-	/*width: 940px;*/
-	height: 75px;
 }
 .underText {
 	text-align: center;
@@ -121,10 +189,9 @@
 	font-size: 16px;
 	line-height: 20px;
 	text-align: center;
-
+	padding-bottom: 62px;
 }
 .underWrapperButton button {
-	/*margin-top: 39px;*/
 	background-color: #FEFEC9;
 	border-radius: 1px;
 	padding: 13px 34px 20px 34px;
@@ -150,7 +217,11 @@
 	margin-top: 28px;
 }
 .methodsInner {
-	padding: 43px;
+	padding: 43px 0;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .methodsH2 {
 	font-family: 'Montserrat';
@@ -175,20 +246,17 @@
 
 	padding: 20px 20px 0 20px;
 }
-.methodsInnerDiv {
+.methodsInnerItem {
 	height: 368px;
 	width: 320px;
-	display: inline-block
-}
-.methodsInnerImage {
-	background-color: #F5F5F5;
 }
 
 /*Эта общие классы для методов (картинки с подписями SET A TARGET, DESIGN A SOLUTION, TRACK THE PROGRESS)*/
 
 .projects {
 	background-color: #F5F5F5;
-	height: 1469px;
+	height: 100%;
+	padding: 70px 0;
 }
 .projectsH1 {
 	
@@ -200,7 +268,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-	padding: 79px 0 28px 0;
+	padding: 0 0 28px 0;
 }
 .projectsH1::after {
 	display: block;
@@ -212,8 +280,12 @@
 	margin-top: 28px;
 }
 .projectRow {
-	text-align: center;
 	padding-bottom: 20px;
+	justify-content: center;
+	display: flex;
+	gap: 20px;
+
+	flex-wrap: wrap;
 }
 .project {
 	height: 384px;
@@ -228,12 +300,6 @@
 	transform: scale(1.1);
 }
 
-
-.projectRow {
-	justify-content: center;
-	display: flex;
-	gap: 20px;
-}
 /*Конкретная карточка с картинкой*/
 
 .projectsH2 {
@@ -285,6 +351,7 @@
 	justify-content: center;
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
 }
 .personal {
 	display: inline-block;
@@ -331,6 +398,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 0;
+	flex-wrap: wrap;
 }
 
 .prev, .next {
@@ -343,9 +411,15 @@
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 }
-.navButton {
+.sliderButton {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@media (max-width: 430px) {
+	.sliderButton {
+		display: none;
+	}
 }
 .next {
 	right: 0;
@@ -382,9 +456,11 @@
 /*Анимация переключения слайдера*/
 
 .slider {
-	height: 511px;
+	height: 100%;
 	padding-top: 140px;
 	text-align: center;
+
+	padding-bottom: 70px;
 }
 .sliderReview {
 	font-family: 'Vollkorn';
@@ -413,13 +489,18 @@
 	justify-content: center;
 }
 .sliderContent {
-	width: 446.5px;
-	height: 215px;
+	width: 320px;
+	height: 100%;
 }
 .sliderWand {
 	width: 2px;
 	height: 215px;
 	background: rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 911px) {
+	.sliderWand {
+		display: none;
+	}
 }
 
 /*слайдер с отзывами*/
@@ -427,9 +508,11 @@
 .contacts {
 	background-image: url(../img/contacts/background.svg); /*Хз почему если no-repeat сделать вся картинка пропадает*/
 	background-repeat: no-repeat;
-	height: 517px;
+	height: 100%;
 	background-position: center;
 	background-size: cover;
+
+	padding-bottom: 70px;
 }
 .contactsH1 {
 	
@@ -441,7 +524,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-	padding: 79px 0 28px 0;
+	padding: 79px 0 0 0;
 }
 .contactsH1::after {
 	display: block;
@@ -457,11 +540,12 @@
 	justify-content: center;
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
 }
 .contact {
 	display: inline-block;
-	height: 238px;
 	width: 320px;
+	height: 100%;
 }
 .contactH2 {
 	font-family: 'Montserrat';
@@ -512,20 +596,30 @@
 /*LET’s Get in touch социалки, адреса и тд*/
 
 .footerMenu {
-	height: 639px;
+	height: 100%;
 	background: #000000;
 	border-radius: 0px;
 }
 .footerContainer {
-	height: 501px;
-	padding: 69px 250px 69px 250px;
+	height: 100%;
+	padding: 69px 0;
+
 }
 .footerForm {
+	text-align: center;
 	margin: auto;
-	height: 398px;
 	width: 564px;
 }
-
+/*650*/
+@media (max-width: 650px) {
+	.footerForm {
+		margin: 0;
+		width: 320px;
+	}
+	.footerInput {
+		max-width: 250px;
+	}
+}
 
 .footerForm::-moz-placeholder { color: white;}
 ::-webkit-input-placeholder { color: white;}
@@ -563,6 +657,7 @@ input::-webkit-inner-spin-button {
 .footerFormBtn {
 	display: flex;
 	padding-top: 22px;
+	justify-content: center;
 }
 .footerBtn {
 	font-family: 'Vollkorn';
@@ -578,8 +673,7 @@ input::-webkit-inner-spin-button {
 	border: 1px solid #7EC4BD;
 	background: black;
 
-
-	margin: auto;
+	/*margin: auto;*/
 	/*Как бы работает но по идее через flexboxы должно работать а не работает дядя богдан пизды даёт за такое*/
 }
 #textArea {
@@ -607,3 +701,5 @@ input::-webkit-inner-spin-button {
 	text-align: center;
 	color: rgba(255, 255, 255, 0.4);
 }
+
+/*Футер*/

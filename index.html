@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="js/slider.js"></script>
+	<script src="js/main.js"></script>
 	<title>Document</title>
 </head>
 <body>
@@ -25,6 +25,15 @@
 									<li class="navItem"><a href="#">contact</a></li>
 								</ul>
 						</nav>
+						<div class="navButton">
+							<button class="navDrop" onclick="dropMenu()">Menu</button>
+							<div class="dropContent" id="dropDownContent">
+								<a href="#">process</a>
+								<a href="#">projects</a>
+								<a href="#">team</a>
+								<a href="#">contact</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -50,23 +59,23 @@
 					<button>Get in Touch</button>
 				</div>
 		</div>
-		<!--Тута надо чекать после того как крестик на место поставим-->
+
 		<div class="methods">
 			<h1 class="methodsHeader">How we make brands thrive</h1>
 			<div class="methodsInner">
-				<div class="methodsInnerDiv">
+				<div class="methodsInnerItem">
 					<div><img src="img/methods/mishen.svg" alt="" class="methodsInnerImage"></div>
 					<h2 class="methodsH2">SET a target</h2>
 					<div class="methodsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
 				</div>
 
-				<div class="methodsInnerDiv">
+				<div class="methodsInnerItem">
 					<div><img src="img/methods/solution.svg" alt="" class="methodsSolutionImage"></div>
 					<h2 class="methodsH2">design a solution</h2>
 					<div class="methodsText">Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</div>
 				</div>
 				
-				<div class="methodsInnerDiv">
+				<div class="methodsInnerItem">
 					<div><img src="img/methods/grafic.svg" alt="" class="methodsGraficImage"></div>
 					<h2 class="methodsH2">track the progress</h2>
 					<div class="methodsText">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
@@ -136,7 +145,6 @@
 						<div class="projectsText">Website</div>
 					</div>
 				</div>
-				<a href=""></a>
 				<div class="project">
 					<a href="#"><img src="img/projects/mountain.svg" alt="" class="projectImage"></a>
 					<div>
@@ -153,6 +161,7 @@
 					</div>
 				</div>
 			</div>
+			<!--3й ряд-->
 		</div>
 
 		<div class="team">
@@ -249,7 +258,7 @@
 						</div>
 					</div>
 					<!-- кнопки -->
-					<div class="navButton">
+					<div class="sliderButton">
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<a class="next" onclick="plusSlides(1)">&#10095;</a>
 					</div>
@@ -262,7 +271,6 @@
 		</div>
 
 		<div class="contacts">
-			<img src="" alt="">
 			<h1 class="contactsH1">LET’s Get in touch</h1>
 			<div class="contactsRow">
 				<div class="contact">
