@@ -16,10 +16,15 @@
 
 	color: #333333;
 	gap: 18px;
-	/*display: grid;
-	grid-template-columns: repeat(2, 2fr);*/
 
 	flex-wrap: wrap;
+}
+.logoText {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	color: #333333;
 }
 .headerContrainer {
 	padding: 24px 250px 0 250px;
@@ -161,7 +166,7 @@
 .underWrapperImage {
 	position: absolute;
 	left: calc(50% - 52px/2);
-	transform:translate(0, -50%);
+	transform:translate(0, -48%);
 }
 /*крч старец пойми меня я не знаю как почему и зачем этот крестик, он по центру не трогай*/
 /*адаптив крестика*/
