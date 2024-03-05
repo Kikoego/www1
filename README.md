@@ -1,6 +1,6 @@
 Макет сайта созданный использу HTML, CSS, JS 
 
-Хостинг - github pages: https://kikoego.github.io/www1/
+Ссылка для просмотра - github pages: https://kikoego.github.io/www1/
 
 Описание функций JS:
 
